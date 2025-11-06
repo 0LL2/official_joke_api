@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
   res.send('hey');  // modified test
 });
 
+app.get('/jokes/count', (req, res) => {
+  res.json({ count: jokes.length });
+});
+
 app.get('/ping', (req, res) => {
   res.send('pong');
 });
